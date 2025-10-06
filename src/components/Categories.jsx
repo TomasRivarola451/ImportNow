@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Categories.css";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -15,23 +14,18 @@ export default function Categories() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // 🔥 efecto aparición scroll (solo mobile)
   useEffect(() => {
-    const header = document.querySelector(".header");
-    const headerHeight = header ? header.offsetHeight : 70;
-    document.documentElement.style.setProperty("--header-height", `${headerHeight}px`);
-  }, []);
-
-  // 🔥 efecto de aparición scroll (mobile)
-  useEffect(() => {
+    if (!isMobile) return;
     const cards = document.querySelectorAll(".category-card");
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const el = entry.target;
           const index = Number(el.dataset.index) || 0;
-
           if (entry.isIntersecting) {
-            el.style.transitionDelay = `${index * 0.28}s`;
+            el.style.transitionDelay = `${index * 0.12}s`;
             el.classList.add("show");
           } else {
             el.classList.remove("show");
@@ -40,7 +34,7 @@ export default function Categories() {
         });
       },
       {
-        threshold: 0.12,
+        threshold: 0.1,
         rootMargin: "0px 0px -10% 0px",
       }
     );
@@ -53,17 +47,14 @@ export default function Categories() {
     return () => observer.disconnect();
   }, [isMobile]);
 
-  // ✅ tus imágenes reales (actualizadas)
   const images = [
-    { src: "/src/assets/images/iphone17.webp", alt: "iPhone 17" },
-    { src: "/src/assets/images/macbookpro.webp", alt: "MacBook Pro" },
-    { src: "/src/assets/images/playstation.webp", alt: "PlayStation 5" },
+    { src: "/images/samsungultra.webp", alt: "Samsung Galaxy S24 Ultra" },
+    { src: "/images/macbookpros.webp", alt: "MacBook Pro" },
+    { src: "/images/iphone17pro.webp", alt: "iPhone 17 Pro" },
   ];
 
   return (
     <section className="categories-section">
-      <h2 className="categories-title">Explorá nuestras categorías</h2>
-
       {isMobile ? (
         <div className="categories-stack">
           {images.map((img, i) => (
@@ -80,7 +71,6 @@ export default function Categories() {
             pagination={{ clickable: true }}
             loop={true}
             slidesPerView={1}
-            spaceBetween={0}
             className="categories-swiper"
           >
             {images.map((img, i) => (

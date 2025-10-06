@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Hero.css";
-import logo from "../assets/images/LogoImp.png";
+import logo from "/images/LogoImp.png";
 import apple from "../assets/icons/icons8-apple.svg";
 import sony from "../assets/icons/icons8-playstation.svg";
 import samsung from "../assets/icons/samsung-svgrepo-com.svg";

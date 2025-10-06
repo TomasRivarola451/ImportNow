@@ -26,10 +26,7 @@ export default function Home() {
     </div>
 
 
-      {/* PRODUCTOS DESTACADOS */}
-      <div id="featured">
-        <Featured />
-      </div>
+  
       <div id="productos">
         <Products />
         <section className="p-4">

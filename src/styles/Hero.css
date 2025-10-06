@@ -1,5 +1,6 @@
 body {
-  font-family: 'lato', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-weight: 300;
 }
 
 .hero {
@@ -13,7 +14,8 @@ body {
   overflow: hidden;
   padding: 2rem;
   color: white;
-  font-family: 'lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300 ;
   background: linear-gradient(270deg, #0d0d0d, #1a1a40, #4d64f4, #0d0d0d);
   background-size: 600% 600%;
   animation: gradientBG 15s ease infinite;
@@ -61,8 +63,8 @@ body {
 
 /* Título */
 .hero-title {
-  font-size: 1.8rem;
-  font-weight: 900;
+  font-size: 1.5rem;
+  font-weight: 300;
   margin: 0 0 1.5rem;
   line-height: 1.3;
   letter-spacing: -0.5px;
@@ -216,13 +218,43 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .hero-title { 
-    font-size: 3rem;
+  .hero {
+    min-height: calc(100vh - 80px);
+    padding: 0.5rem 2rem; /* Reducir padding top/bottom */
   }
+
+  .hero-content {
+    margin-bottom: 90px; /* Reducir espacio */
+  }
+
   .hero-logo { 
-    width: 380px;
+    width: 220px; /* Más pequeño */
+    margin-bottom: 0.8rem;
   }
+
+  .hero-title { 
+    font-size: 1.8rem; /* Más pequeño */
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+  }
+
   .hero-btn {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    margin-top: 0.3rem;
+  }
+
+  .logo-marquee {
+    bottom: 20px; /* Más cerca del borde */
+    padding: 8px 0;
+  }
+
+  .logo-track img { 
+    height: 36px; /* Logos más pequeños */
+  }
+
+  .logo-track img:first-child,
+  .logo-track img:nth-child(11) { 
+    height: 46px; 
   }
 }
