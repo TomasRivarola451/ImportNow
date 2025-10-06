@@ -1,0 +1,199 @@
+/* === Header general === */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Logo */
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* Links en desktop */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 1000;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+               0 0 20px rgba(77, 100, 244, 0.6);
+  transform: translateY(-2px);
+}
+
+/* === Menú hamburguesa (mobile) === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001; /* arriba del menú */
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+/* Animación hamburguesa */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* === Overlay === */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 900;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Ajuste para que el menú esté arriba del overlay */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: -5px 0 15px rgba(0,0,0,0.4);
+  transition: right 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 2rem;
+  z-index: 1000; /* arriba del overlay */
+}
+
+
+/* Cuando está abierto */
+.mobile-menu.open {
+  right: 0; /* entra a la vista */
+}
+
+/* Animaciones de los links (solo cuando abre) */
+.mobile-menu.open a {
+  animation: slideIn 0.4s ease forwards;
+  opacity: 0;
+}
+
+.mobile-menu.open a:nth-child(1) { animation-delay: 0.1s; }
+.mobile-menu.open a:nth-child(2) { animation-delay: 0.2s; }
+.mobile-menu.open a:nth-child(3) { animation-delay: 0.3s; }
+.mobile-menu.open a:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideIn {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Links en mobile */
+.mobile-menu a {
+  display: block;
+  color: #fff;
+  font-size: 1.6rem; /* un poco más grande */
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Separador sutil entre links */
+.mobile-menu a:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Efecto de "tap" */
+.mobile-menu a:active {
+  background: rgba(77, 100, 244, 0.2); /* violeta claro */
+  transform: scale(0.96); /* leve efecto de presión */
+}
+
+/* En mobile los colores se mantienen más intensos */
+@media (max-width: 768px) {
+  .mobile-menu a {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
+
+/* === Centrar navegación en desktop === */
+@media (min-width: 769px) {
+  .header {
+    justify-content: center;
+  }
+
+  .logo {
+    position: absolute;
+    left: 40px;
+  }
+
+  .nav-links {
+    gap: 40px;
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+  
+  .nav-links {
+    display: none; /* oculto en mobile */
+  }
+  .hamburger {
+    display: flex; /* activo en mobile */
+  }
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}

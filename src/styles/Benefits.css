@@ -1,0 +1,87 @@
+.benefits {
+  width: 100%;
+  padding: 2rem 1rem; /* más compacto */
+  background: oklch(20.648% 0.03151 289.053); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefits-container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* benefit card */
+.benefit-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.2rem 1rem; /* más compacto */
+  border-radius: 14px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(90deg, #4d64f4, #7f5af0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.benefit-card p {
+  font-size: 0.85rem;
+  color: #cfcfcf;
+}
+
+/* hover desktop */
+.benefit-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 10px 22px rgba(77, 100, 244, 0.25);
+}
+
+/* ✅ estilos mobile-first */
+@media (max-width: 768px) {
+  .benefits {
+    padding: 1.5rem 1rem;
+  }
+
+  .benefit-card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .benefit-card h3 {
+    font-size: 1rem;
+  }
+
+  .benefit-card p {
+    font-size: 0.8rem;
+  }
+
+  .benefit-card:active {
+    transform: scale(0.97);
+    box-shadow: 0 6px 15px rgba(77, 100, 244, 0.4);
+  }
+}
+
+/* ✅ layout en desktop */
+@media (min-width: 769px) {
+  .benefits-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .benefit-card {
+    flex: 1;
+    max-width: 280px; /* más angosto */
+  }
+}

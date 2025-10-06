@@ -1,0 +1,105 @@
+:root {
+  --header-height: 70px;
+}
+
+.categories-section {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(135deg, #0e0e10 0%, #141426 60%);
+  padding: 2.5rem 1rem;
+}
+
+.categories-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #4d64f4, #7f5af0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========== MOBILE STACK ========== */
+.categories-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.category-card {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  opacity: 0;
+  transform: translateY(60px) scale(0.97);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========== DESKTOP HERO SLIDER ========== */
+@media (min-width: 769px) {
+  .categories-section {
+    padding: 0;
+  }
+
+  .desktop-slider-wrap {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    position: relative;
+  }
+
+  .categories-swiper {
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+  }
+
+  .category-slide {
+    width: 100%;
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .category-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* llena toda la pantalla */
+    transition: transform 0.6s ease, filter 0.6s ease;
+    display: block;
+    background: black;
+  }
+
+  .category-slide:hover img {
+    transform: scale(1.03);
+    filter: brightness(1.03);
+  }
+
+  .swiper-pagination-bullet {
+    background: rgba(127, 90, 240, 0.7) !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #4d64f4 !important;
+  }
+}
