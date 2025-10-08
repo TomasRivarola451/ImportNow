@@ -1,84 +1,159 @@
 .products-section {
   background-color: #000;
   color: #fff;
-  padding: 4rem 2rem;
+  padding: 4rem 1.5rem;
   position: relative;
   overflow: hidden;
 }
 
+.products-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(77, 100, 244, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
 .products-header {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .products-header h2 {
   font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%);
+  background-clip: text;
+-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .products-header p {
-  color: #ccc;
+  color: #888;
   font-size: 1rem;
-}
-
-/* === Swiper === */
-.products-swiper {
-  width: 100%;
+  font-weight: 300;
 }
 
 .product-card {
-  background: linear-gradient(145deg, #1a1a1a, #000);
-  border-radius: 1rem;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  border: 1px solid #222;
+  border-radius: 1.25rem;
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.product-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 30px rgba(77, 100, 244, 0.3);
+/* Brillo en la card activa solo en mobile */
+@media (max-width: 639px) {
+  .swiper-slide-active .product-card {
+    border-color: var(--accent-color, rgba(77, 100, 244, 0.5));
+    transform: scale(1.02);
+  }
+}
+
+/* En desktop, solo el hover aplica efectos */
+@media (min-width: 640px) {
+  .swiper-slide-active .product-card {
+    border-color: #222; /* vuelve al borde normal */
+    transform: none;
+  }
+}
+
+/* Hover solo en desktop */
+@media (hover: hover) {
+  .product-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    border-color: var(--accent-color, rgba(77, 100, 244, 0.3));
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6),
+                0 0 40px color-mix(in srgb, var(--accent-color) 25%, transparent);
+  }
 }
 
 .product-image {
   width: 100%;
-  height: 250px;
+  height: 280px;
   overflow: hidden;
+  background: #000;
+  position: relative;
+  flex-shrink: 0;
 }
 
 .product-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s ease;
+  object-fit: contain;
+  padding: 1.25rem;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  animation: float 4s ease-in-out infinite;
 }
 
-.product-card:hover img {
-  transform: scale(1.08);
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }
 
 .product-card h3 {
-  padding: 1rem;
-  font-size: 1.1rem;
-  font-weight: 500;
+  padding: 1.25rem;
+  font-size: 1.05rem;
+  font-weight: 600;
   text-align: center;
   color: #fff;
-  background: rgba(20, 20, 20, 0.8);
-  backdrop-filter: blur(5px);
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #222;
 }
 
-/* === Animación suave al aparecer === */
-.product-card {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s ease forwards;
+/* Título activo más suave */
+.swiper-slide-active .product-card h3 {
+  text-shadow: 0 0 12px rgba(77, 100, 244, 0.15);
 }
 
+/* Animación de entrada solo en desktop */
 @keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 639px) {
+  .products-swiper {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-slide-active {
+    transform: translateX(0);
+  }
+
+  .product-card {
+    transform-origin: center;
   }
 }
+@media (min-width: 640px) {
+  .products-swiper {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product-image { height: 320px; }
+  .products-header h2 { font-size: 2.5rem; }
+  .products-section { padding: 5rem 2rem; }
+}
+

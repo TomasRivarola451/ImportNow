@@ -1,0 +1,134 @@
+.about-section {
+  background-color: #0b0b0b;
+  color: white;
+  padding: 80px 20px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-text {
+  max-width: 750px;
+}
+
+.about-text h2 {
+  font-size: 2.3rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #d4d4d4;
+  margin-bottom: 15px;
+}
+
+.about-text strong {
+  color: white;
+}
+
+.about-slogan {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  color: #b3b3b3;
+}
+
+.about-slogan span {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+/* === IMÁGENES === */
+.about-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: nowrap;
+}
+
+.person-card {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s ease;
+}
+
+.person-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover con brillo violeta */
+@media (min-width: 1024px) {
+  .person-card:hover img {
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.7);
+    transform: scale(1.05);
+  }
+}
+
+.person-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.person-card h4 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.person-card p {
+  color: #a1a1a1;
+  font-size: 0.95rem;
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .about-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-text {
+    flex: 1;
+    padding-right: 40px;
+    text-align: left;
+  }
+
+  .about-images {
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .about-text {
+    text-align: left; /* centrado limpio de izquierda a derecha */
+  }
+
+  .about-images {
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  .person-card img {
+    width: 140px;
+    height: 140px;
+  }
+}

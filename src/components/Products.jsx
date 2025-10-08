@@ -6,12 +6,19 @@ import "swiper/css";
 
 export default function Products() {
   const products = [
-    { name: "MacBook Pro M3", img: "/images/6.png" },
-    { name: "PlayStation 5", img: "/images/14.png" },
-    { name: "AirPods Pro 2", img: "/images/8.png" },
-    { name: "iPhone 17 Pro", img: "/images/iphone17pro.webp" },
-    { name: "Samsung S24 Ultra", img: "/images/samsungultra.webp" },
-    { name: "Apple Watch Ultra 2", img: "/images/applewatch.webp" },
+    { name: "iPhone 17 Pro", img: "/images/iphoneprocarru.webp", accent: "#7C3AED" },
+    { name: "PlayStation 5 Pro", img: "/images/playcarru.webp", accent: "#7C3AED" },
+    { name: "MacBook Pro", img: "/images/macbookcarru.webp", accent: "#7C3AED" },
+    { name: "AirPods Pro 3", img: "/images/airpodcarru.webp", accent: "#7C3AED" },
+    { name: "Samsung S25 Ultra", img: "/images/samsungcarru.webp", accent: "#7C3AED" },
+    { name: "JBL Charge 5", img: "/images/jblcarru.webp", accent: "#7C3AED" },
+    { name: "Motorola Razr 60 Ultra", img: "/images/motocarru.webp", accent: "#7C3AED" },
+    { name: "DJI Osmo Pocket 3", img: "/images/camcarru.webp", accent: "#7C3AED" },
+    { name: "Iphone 16", img: "/images/iphonecarru.webp", accent: "#7C3AED" },
+    { name: "Microfono Wireless DJI", img: "/images/miccarru.webp", accent: "#7C3AED" },
+    { name: "Drone DJI mini 4 Pro", img: "/images/droncarru.webp", accent: "#7C3AED" },
+    { name: "Ipad Pro", img: "/images/ipadcarru.webp", accent: "#7C3AED" },
+
   ];
 
   return (
@@ -23,20 +30,20 @@ export default function Products() {
 
       <Swiper
         modules={[Autoplay]}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 3500, disableOnInteraction: false }}
         loop={true}
         slidesPerView={1.2}
-        spaceBetween={16}
+        spaceBetween={20}
         breakpoints={{
-          640: { slidesPerView: 2.2, spaceBetween: 20 },
+          640: { slidesPerView: 2.2, spaceBetween: 24 },
           1024: { slidesPerView: 3.2, spaceBetween: 30 },
-          1440: { slidesPerView: 4.2, spaceBetween: 40 },
+          1440: { slidesPerView: 4.2, spaceBetween: 36 },
         }}
         className="products-swiper"
       >
         {products.map((product, i) => (
           <SwiperSlide key={i}>
-            <div className="product-card">
+            <div className="product-card" style={{'--accent-color': product.accent}}>
               <div className="product-image">
                 <img src={product.img} alt={product.name} loading="lazy" />
               </div>

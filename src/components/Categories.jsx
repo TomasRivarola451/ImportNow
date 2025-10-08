@@ -49,8 +49,8 @@ export default function Categories() {
 
   const images = [
     { src: "/images/samsungultra.webp", alt: "Samsung Galaxy S24 Ultra" },
-    { src: "/images/macbookpros.webp", alt: "MacBook Pro" },
-    { src: "/images/iphone17pro.webp", alt: "iPhone 17 Pro" },
+    { src: "/images/macbookbanner.webp", alt: "MacBook Pro" },
+    { src: "/images/iphonebaner.webp", alt: "iPhone 17 Pro" },
   ];
 
   return (
