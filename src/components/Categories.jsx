@@ -47,10 +47,11 @@ export default function Categories() {
     return () => observer.disconnect();
   }, [isMobile]);
 
+  // Cambié el orden: iPhone primero para diagnosticar
   const images = [
+    { src: "/images/iphonebaner.webp", alt: "iPhone 17 Pro", eager: true },
     { src: "/images/samsungultra.webp", alt: "Samsung Galaxy S24 Ultra" },
     { src: "/images/macbookbanner.webp", alt: "MacBook Pro" },
-    { src: "/images/iphonebaner.webp", alt: "iPhone 17 Pro" },
   ];
 
   return (
@@ -59,7 +60,11 @@ export default function Categories() {
         <div className="categories-stack">
           {images.map((img, i) => (
             <div className="category-card" key={i} data-index={i}>
-              <img src={img.src} alt={img.alt} loading="lazy" />
+              <img 
+                src={img.src} 
+                alt={img.alt} 
+                loading={img.eager ? "eager" : "lazy"}
+              />
             </div>
           ))}
         </div>
@@ -76,7 +81,11 @@ export default function Categories() {
             {images.map((img, i) => (
               <SwiperSlide key={i}>
                 <div className="category-slide">
-                  <img src={img.src} alt={img.alt} loading="lazy" />
+                  <img 
+                    src={img.src} 
+                    alt={img.alt} 
+                    loading={img.eager ? "eager" : "lazy"}
+                  />
                 </div>
               </SwiperSlide>
             ))}
