@@ -14,7 +14,7 @@ export default function Categories() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // 🔥 efecto aparición scroll (solo mobile)
+
   useEffect(() => {
     if (!isMobile) return;
     const cards = document.querySelectorAll(".category-card");
@@ -47,11 +47,10 @@ export default function Categories() {
     return () => observer.disconnect();
   }, [isMobile]);
 
-  // Cambié el orden: iPhone primero para diagnosticar
   const images = [
-    { src: "/images/iphonebaner.webp", alt: "iPhone 17 Pro", eager: true },
-    { src: "/images/samsungultra.webp", alt: "Samsung Galaxy S24 Ultra" },
     { src: "/images/macbookbanner.webp", alt: "MacBook Pro" },
+    { src: "/images/samsungultra.webp", alt: "Samsung Galaxy S24 Ultra" },
+    { src: "/images/iphonebaner.webp", alt: "iPhone 17 Pro", eager: true },
   ];
 
   return (

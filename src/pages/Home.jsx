@@ -25,7 +25,7 @@ export default function Home() {
     <div id="categories">
         <Categories />
     </div>
-    di
+  
 
   
       <div id="productos">

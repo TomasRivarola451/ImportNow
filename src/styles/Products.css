@@ -31,7 +31,7 @@
   font-weight: 700;
   background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%);
   background-clip: text;
--webkit-background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -39,6 +39,66 @@
   color: #888;
   font-size: 1rem;
   font-weight: 300;
+}
+
+/* Contenedor para swiper + flechas flotantes */
+.swiper-container-wrapper {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Flechas flotantes a los costados - solo desktop */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.swiper-button-prev-custom {
+  left: -24px;
+}
+
+.swiper-button-next-custom {
+  right: -24px;
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.swiper-button-prev-custom:active,
+.swiper-button-next-custom:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.swiper-button-prev-custom.swiper-button-disabled,
+.swiper-button-next-custom.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.swiper-button-prev-custom svg,
+.swiper-button-next-custom svg {
+  width: 22px;
+  height: 22px;
 }
 
 .product-card {
@@ -65,7 +125,7 @@
 /* En desktop, solo el hover aplica efectos */
 @media (min-width: 640px) {
   .swiper-slide-active .product-card {
-    border-color: #222; /* vuelve al borde normal */
+    border-color: #222;
     transform: none;
   }
 }
@@ -119,7 +179,7 @@
   text-shadow: 0 0 12px rgba(77, 100, 244, 0.15);
 }
 
-/* Animación de entrada solo en desktop */
+/* Animación de entrada */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -144,6 +204,7 @@
     transform-origin: center;
   }
 }
+
 @media (min-width: 640px) {
   .products-swiper {
     padding-left: 5%;
@@ -155,5 +216,10 @@
   .product-image { height: 320px; }
   .products-header h2 { font-size: 2.5rem; }
   .products-section { padding: 5rem 2rem; }
+  
+  /* Mostrar flechas flotantes solo en desktop */
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    display: flex;
+  }
 }
-
