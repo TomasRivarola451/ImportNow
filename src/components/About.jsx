@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../styles/about.css";
+import "../styles/About.css";
 
 export default function About() {
   useEffect(() => {
