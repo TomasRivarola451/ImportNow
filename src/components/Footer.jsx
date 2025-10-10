@@ -14,7 +14,7 @@ export default function Footer() {
         <p>Comunicate con nosotros por WhatsApp o redes sociales</p>
 
         <a
-          href="https://wa.me/5491112345678"
+          href="https://wa.me/2616851478"
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-btn"
@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="footer-item">
           <FaInstagram />
           <a
-            href="https://instagram.com/importnow"
+            href="https://www.instagram.com/importnow.arg/"
             target="_blank"
             rel="noopener noreferrer"
           >

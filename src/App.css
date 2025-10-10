@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+h1, h2, h3, h4 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p, span, a {
+  font-family: "Poppins", sans-serif;
+}

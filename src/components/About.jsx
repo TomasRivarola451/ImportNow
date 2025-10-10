@@ -25,8 +25,8 @@ export default function About() {
   return (
     <section className="about-section">
       <div className="about-container">
-        <div className="about-text">
-          <h2>Nuestro equipo</h2>
+        <div className="about-text fade-up">
+          <h2 className="about-title">Nuestro equipo</h2>
           <p>
             En <strong>ImportNow</strong> acercamos tecnología de primer nivel a todo el país,
             con procesos simples, precios competitivos y respaldo profesional.
@@ -63,3 +63,4 @@ export default function About() {
     </section>
   );
 }
+

@@ -12,7 +12,7 @@ export default function Benefits() {
           if (entry.isIntersecting) {
             entry.target.classList.add("show");
           } else {
-            entry.target.classList.remove("show"); // se quita al salir para reanimar al volver a entrar
+            entry.target.classList.remove("show"); 
           }
         });
       },

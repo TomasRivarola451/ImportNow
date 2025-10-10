@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="bg-black text-white font-sans">
       {/* HERO */}
-      <div id="hero" className="fade-up">
+      <div id="hero">
         <Hero />
       </div>
 

@@ -1,3 +1,4 @@
+
 body {
 font-family: 'Montserrat', sans-serif;
 font-weight: 300;
@@ -16,11 +17,10 @@ font-weight: 300;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300 ;
-  background: linear-gradient(270deg, #080808, #15152f, #3b4ed6, #080808);
+  background: linear-gradient(270deg, #0d0d0d, #1a1a40, #4d64f4, #0d0d0d);
   background-size: 600% 600%;
   animation: gradientBG 15s ease infinite;
 }
-
 
 @keyframes gradientBG {
   0% { background-position: 0% 50%; }
@@ -258,4 +258,4 @@ font-weight: 300;
   .logo-track img:nth-child(11) { 
     height: 46px; 
   }
-}
+} 

@@ -48,15 +48,9 @@ export default function Hero() {
             <img key={`2-${i}`} src={src} alt="marca" />
           ))}
                     {[apple, sony, samsung, dji, jbl, garmin, motorola, rayban, xiaomi, hp].map((src, i) => (
-            <img key={i} src={src} alt="marca" />
-          ))}
-          {[apple, sony, samsung, dji, jbl, garmin, motorola, rayban, xiaomi, hp].map((src, i) => (
             <img key={`2-${i}`} src={src} alt="marca" />
           ))}
                     {[apple, sony, samsung, dji, jbl, garmin, motorola, rayban, xiaomi, hp].map((src, i) => (
-            <img key={i} src={src} alt="marca" />
-          ))}
-          {[apple, sony, samsung, dji, jbl, garmin, motorola, rayban, xiaomi, hp].map((src, i) => (
             <img key={`2-${i}`} src={src} alt="marca" />
           ))}
         </div>

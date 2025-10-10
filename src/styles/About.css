@@ -2,6 +2,7 @@
   background-color: #0b0b0b;
   color: white;
   padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 .about-container {
@@ -13,16 +14,23 @@
   gap: 60px;
 }
 
+/* === TEXTO PRINCIPAL === */
 .about-text {
   max-width: 750px;
+  text-align: center;
 }
 
-.about-text h2 {
-  font-size: 2.3rem;
-  color: white;
+/* NUEVO ESTILO UNIFICADO */
+.about-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
   margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
+/* Párrafos */
 .about-text p {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -34,6 +42,7 @@
   color: white;
 }
 
+/* Slogan */
 .about-slogan {
   font-size: 1.2rem;
   margin-top: 30px;
@@ -41,7 +50,7 @@
 }
 
 .about-slogan span {
-  color: #7c3aed;
+  color: #4d64f4;
   font-weight: 600;
 }
 
@@ -95,7 +104,7 @@
   font-size: 0.95rem;
 }
 
-/* Desktop */
+/* === RESPONSIVE === */
 @media (min-width: 1024px) {
   .about-container {
     flex-direction: row;
@@ -113,12 +122,15 @@
     flex: 1;
     justify-content: flex-end;
   }
+
+  .about-title {
+    text-align: left; /* coherente en desktop */
+  }
 }
 
-/* Mobile */
 @media (max-width: 640px) {
   .about-text {
-    text-align: left; /* centrado limpio de izquierda a derecha */
+    text-align: left;
   }
 
   .about-images {
@@ -130,5 +142,21 @@
   .person-card img {
     width: 140px;
     height: 140px;
+  }
+}
+/* === Ajustes tipográficos responsivos === */
+@media (max-width: 640px) {
+  .about-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-slogan {
+    font-size: 1rem;
   }
 }

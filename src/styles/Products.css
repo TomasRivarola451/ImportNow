@@ -223,3 +223,15 @@
     display: flex;
   }
 }
+/* === Ajustes tipográficos responsivos === */
+@media (max-width: 640px) {
+  .products-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  .products-header p {
+    font-size: 0.95rem;
+    margin-top: 4px;
+  }
+}
