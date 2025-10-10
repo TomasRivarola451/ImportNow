@@ -40,7 +40,7 @@ export default function Header() {
         <a href="#hero" onClick={toggleMenu}>Inicio</a>
         <a href="#productos" onClick={toggleMenu}>Productos</a>
         <a href="#nosotros" onClick={toggleMenu}>Nosotros</a>
-        <a href="#contacto" onClick={toggleMenu}>Contacto</a>
+        <a href="#footer" onClick={toggleMenu}>Contacto</a>
       </div>
     </header>
   );
