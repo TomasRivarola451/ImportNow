@@ -1,7 +1,6 @@
-
 body {
-font-family: 'Montserrat', sans-serif;
-font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
 }
 
 .hero {
@@ -16,7 +15,7 @@ font-weight: 300;
   padding: 2rem;
   color: white;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 300 ;
+  font-weight: 300;
   background: linear-gradient(270deg, #0d0d0d, #1a1a40, #4d64f4, #0d0d0d);
   background-size: 600% 600%;
   animation: gradientBG 15s ease infinite;
@@ -36,7 +35,7 @@ font-weight: 300;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 .s-1 { --d: 0.10s; }
@@ -46,12 +45,12 @@ font-weight: 300;
 
 /* Logo */
 .hero-logo {
-  width: 280px;
+  width: 260px;
   height: auto;
   display: block;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.2rem; /* antes 0.6rem → bajamos más el logo */
   filter: drop-shadow(0 0 20px rgba(77,100,244,0.6));
-  transform: scale(.9);
+  transform: translateY(10px);
   opacity: 0;
   animation: zoomIn 0.7s cubic-bezier(.2,.9,.2,1) forwards;
   animation-delay: var(--d, 0s);
@@ -66,8 +65,8 @@ font-weight: 300;
 .hero-title {
   font-size: 1.5rem;
   font-weight: 300;
-  margin: 0 0 1.5rem;
-  line-height: 1.3;
+  margin: 0 0 1.2rem; /* mismo margen que el logo para equilibrar */
+  line-height: 1.25;
   letter-spacing: -0.5px;
   opacity: 0;
   transform: translateY(20px);
@@ -80,9 +79,9 @@ font-weight: 300;
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Botón mejorado */
+/* Botón */
 .hero-btn {
-  margin-top: 1rem;
+  margin-top: 1.2rem; /* igual al espacio del logo → equilibrio vertical */
   background: linear-gradient(135deg, #5b73ff, #4d64f4);
   color: #fff;
   border: none;
@@ -91,7 +90,7 @@ font-weight: 300;
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(77, 100, 244, 0.4), 
+  box-shadow: 0 10px 30px rgba(77, 100, 244, 0.4),
               0 2px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(12px);
   opacity: 0;
@@ -105,7 +104,6 @@ font-weight: 300;
   z-index: 3;
 }
 
-/* Efecto de brillo en el botón */
 .hero-btn::before {
   content: '';
   position: absolute;
@@ -123,7 +121,7 @@ font-weight: 300;
 
 .hero-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 15px 40px rgba(77, 100, 244, 0.5), 
+  box-shadow: 0 15px 40px rgba(77, 100, 244, 0.5),
               0 5px 15px rgba(0, 0, 0, 0.3);
   background: linear-gradient(135deg, #6b83ff, #5b73ff);
 }
@@ -132,7 +130,7 @@ font-weight: 300;
   transform: translateY(-1px) scale(1.02);
 }
 
-/* Carrusel con fade effect */
+/* Carrusel */
 .logo-marquee {
   position: absolute;
   left: 0;
@@ -143,28 +141,15 @@ font-weight: 300;
   width: 100%;
   overflow: hidden;
   padding: 15px 0;
-  /* Fade effect en los bordes */
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 .logo-track {
   display: flex;
   align-items: center;
   gap: 3rem;
-  animation: marqueeInfinite 10s linear infinite;
+  animation: marqueeInfinite 40s linear infinite;
 }
 
 .logo-track img {
@@ -186,76 +171,52 @@ font-weight: 300;
   opacity: 1;
 }
 
-/* Animación infinita y sin cortes */
 @keyframes marqueeInfinite {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 
-/* Responsive */
-@media (min-width: 640px) {
-  .hero-title { 
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-  .hero-logo { 
-    width: 320px;
-    margin-bottom: 2rem;
-  }
-  .hero-btn {
-    font-size: 1.15rem;
-    padding: 1.1rem 3rem;
-  }
-  .logo-track img { height: 48px; }
-  .logo-track img:first-child,
-  .logo-track img:nth-child(11) { height: 60px; }
-  .logo-track {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  animation: marqueeInfinite 40s linear infinite;
-}
-  
-}
-
+/* === Desktop === */
 @media (min-width: 1024px) {
-  .hero {
-    min-height: calc(100vh - 80px);
-    padding: 0.5rem 2rem; /* Reducir padding top/bottom */
-  }
-
   .hero-content {
-    margin-bottom: 90px; /* Reducir espacio */
+    margin-bottom: 70px;
   }
 
-  .hero-logo { 
-    width: 220px; /* Más pequeño */
-    margin-bottom: 0.8rem;
+  .hero-logo {
+    width: 300px;
+    margin-bottom: 1.4rem; /* más espacio debajo del logo */
   }
 
-  .hero-title { 
-    font-size: 1.8rem; /* Más pequeño */
-    margin-bottom: 0.8rem;
+  .hero-title {
+    font-size: 2.3rem;
+    margin-bottom: 1.4rem; /* mismo espaciado que arriba */
     line-height: 1.2;
   }
 
   .hero-btn {
-    font-size: 1rem;
-    padding: 0.8rem 2rem;
-    margin-top: 0.3rem;
+    font-size: 1.1rem;
+    padding: 1rem 2.6rem;
+    margin-top: 1.4rem; /* equilibrio */
   }
 
   .logo-marquee {
-    bottom: 20px; /* Más cerca del borde */
-    padding: 8px 0;
+    bottom: 25px;
+  }
+}
+
+/* === Mobile === */
+@media (max-width: 640px) {
+  .hero-logo {
+    width: 220px;
+    margin-bottom: 1.2rem; /* igual al espacio inferior del texto */
   }
 
-  .logo-track img { 
-    height: 36px; /* Logos más pequeños */
+  .hero-title {
+    font-size: 1.35rem;
+    margin-bottom: 1.2rem;
   }
 
-  .logo-track img:first-child,
-  .logo-track img:nth-child(11) { 
-    height: 46px; 
+  .hero-btn {
+    margin-top: 1.2rem;
   }
-} 
+}

@@ -1,17 +1,21 @@
-// src/components/Header.jsx
 import React, { useState } from "react";
 import "../styles/Header.css";
 import logoIcon from "../assets/icons/2-Photoroom.png";
+
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   const toggleMenu = () => setOpen(!open);
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setOpen(false);
+  };
 
   return (
     <header className="header">
-      {/* LOGO (tu icono pequeño) */}
-      <div className="logo">
-        <img src={logoIcon} alt="ImportNow logo" />
+      {/* LOGO (clickeable para ir al inicio) */}
+      <div className="logo" onClick={scrollToTop}>
+        <img src={logoIcon} alt="ImportNow logo" className="clickable-logo" />
       </div>
 
       {/* LINKS EN DESKTOP */}
@@ -23,10 +27,7 @@ export default function Header() {
       </nav>
 
       {/* BOTÓN HAMBURGUESA */}
-      <div
-        className={`hamburger ${open ? "open" : ""}`}
-        onClick={toggleMenu}
-      >
+      <div className={`hamburger ${open ? "open" : ""}`} onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
@@ -40,7 +41,7 @@ export default function Header() {
         <a href="#hero" onClick={toggleMenu}>Inicio</a>
         <a href="#productos" onClick={toggleMenu}>Productos</a>
         <a href="#nosotros" onClick={toggleMenu}>Nosotros</a>
-        <a href="#footer" onClick={toggleMenu}>Contacto</a>
+        <a href="#contacto" onClick={toggleMenu}>Contacto</a>
       </div>
     </header>
   );

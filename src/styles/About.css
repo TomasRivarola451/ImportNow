@@ -75,10 +75,10 @@
   transform: translateY(0);
 }
 
-/* Hover con brillo violeta */
+/* Hover con brillo violeta #4d64f4 */
 @media (min-width: 1024px) {
   .person-card:hover img {
-    box-shadow: 0 0 25px rgba(124, 58, 237, 0.7);
+    box-shadow: 0 0 25px rgba(77, 100, 244, 0.7);
     transform: scale(1.05);
   }
 }
@@ -88,7 +88,7 @@
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0 15px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 0 15px rgba(77, 100, 244, 0.3);
   margin-bottom: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -124,7 +124,7 @@
   }
 
   .about-title {
-    text-align: left; /* coherente en desktop */
+    text-align: left;
   }
 }
 
@@ -144,6 +144,7 @@
     height: 140px;
   }
 }
+
 /* === Ajustes tipográficos responsivos === */
 @media (max-width: 640px) {
   .about-title {

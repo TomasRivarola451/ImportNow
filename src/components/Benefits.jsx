@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/Benefits.css";
 import { FaBoxOpen, FaShippingFast, FaHeadset } from "react-icons/fa";
+import { FaShieldAlt } from "react-icons/fa";
+
 
 export default function Benefits() {
   const benefitsRef = useRef([]);
@@ -32,11 +34,12 @@ export default function Benefits() {
       title: "Productos originales",
       text: "Solo trabajamos con marcas y proveedores oficiales.",
     },
-    {
-      icon: <FaShippingFast />,
-      title: "Envíos rápidos",
-      text: "Entregas en todo el país en tiempo récord.",
+{
+      icon: <FaShieldAlt />, // ícono de un escudo, transmite protección/garantía
+      title: "Garantía asegurada",
+      text: "Todos nuestros productos cuentan con garantía y respaldo profesional.",
     },
+
     {
       icon: <FaHeadset />,
       title: "Atención personalizada",

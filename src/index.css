@@ -9,6 +9,15 @@
     background-position: 100% 50%;
   }
 }
+:root {
+  --accent-color: #4d64f4; /* Color principal */
+  --accent-light: rgba(77, 100, 244, 0.6); /* Para sombras o brillos suaves */
+  --accent-lighter: rgba(77, 100, 244, 0.3); /* Para bordes o fondos tenues */
+  --text-color: #ffffff;
+  --text-muted: #a1a1a1;
+  --bg-dark: #000000;
+  --bg-darker: #0b0b0b;
+}
 
 .animate-gradient-x {
   background-size: 200% 200%;

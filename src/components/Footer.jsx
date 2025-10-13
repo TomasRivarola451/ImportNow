@@ -14,7 +14,7 @@ export default function Footer() {
         <p>Comunicate con nosotros por WhatsApp o redes sociales</p>
 
         <a
-          href="https://wa.me/2616851478"
+          href="https://wa.me/2616851478?text=%C2%A1Hola!%20Estoy%20interesado%20en%20los%20productos%20de%20Import%20Now.%20%C2%BFPodr%C3%ADan%20brindarme%20m%C3%A1s%20informaci%C3%B3n%3F"
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-btn"
@@ -41,7 +41,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            @importnow
+          importnow
           </a>
         </div>
       </div>
