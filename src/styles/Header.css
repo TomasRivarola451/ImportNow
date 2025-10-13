@@ -1,4 +1,3 @@
-/* === Header general === */
 .header {
   position: fixed;
   top: 0;
@@ -14,7 +13,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Logo */
 .logo img {
   height: 60px;
   width: auto;
@@ -26,7 +24,6 @@
   transform: scale(1.05);
 }
 
-/* Links en desktop */
 .nav-links {
   display: flex;
   gap: 30px;
@@ -40,7 +37,7 @@
   letter-spacing: 0.5px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
-  text-transform: none; /* mantiene el formato normal */
+  text-transform: none; 
 }
 
 .nav-links a:hover {
@@ -66,7 +63,6 @@
   transition: all 0.3s ease;
 }
 
-/* Animación hamburguesa */
 .hamburger.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -95,7 +91,6 @@
   to { opacity: 1; }
 }
 
-/* === Menú móvil === */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -115,17 +110,16 @@
   right: 0;
 }
 
-/* Links */
 .mobile-menu a {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 600;
-  text-transform: none; /* quita las mayúsculas */
+  text-transform: none; 
   margin: 1.2rem 0;
   text-decoration: none;
   position: relative;
   transition: all 0.3s ease;
-  font-family: inherit; /* mantiene la misma tipografía que desktop */
+  font-family: inherit; 
 }
 
 .mobile-menu a::after {
@@ -148,7 +142,6 @@
   width: 100%;
 }
 
-/* === Centrar navegación en desktop === */
 @media (min-width: 769px) {
   .header {
     justify-content: center;
@@ -179,7 +172,6 @@
   }
 }
 
-/* Scroll suave */
 html {
   scroll-behavior: smooth;
 }

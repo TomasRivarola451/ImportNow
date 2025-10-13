@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import React from "react";
 import "../styles/Footer.css";
 import { FaWhatsapp, FaInstagram, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
@@ -24,11 +23,10 @@ export default function Footer() {
         </a>
       </div>
 
-      {/* Info secundaria */}
       <div className="footer-info">
         <div className="footer-item">
           <FaEnvelope />
-          <span>importnow@gmail.com</span>
+          <span>import.now.arg@gmail.com</span>
         </div>
         <div className="footer-item">
           <FaMapMarkerAlt />
@@ -46,9 +44,8 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Derechos reservados */}
       <div className="footer-bottom">
-        © {currentYear} <span>ImportNow</span>. Todos los derechos reservados.
+         {currentYear} <span>ImportNow</span>. Importamos confianza.
       </div>
     </footer>
   );

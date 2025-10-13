@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "../components/Hero";
-import Featured from "../components/Featured";
 import Products from "../components/Products";
 import Benefits from "../components/Benefits";
 import Footer from "../components/Footer";

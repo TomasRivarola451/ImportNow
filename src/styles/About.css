@@ -13,14 +13,11 @@
   align-items: center;
   gap: 60px;
 }
-
-/* === TEXTO PRINCIPAL === */
 .about-text {
   max-width: 750px;
   text-align: center;
 }
 
-/* NUEVO ESTILO UNIFICADO */
 .about-title {
   font-size: 2.4rem;
   font-weight: 700;
@@ -30,7 +27,6 @@
   text-align: center;
 }
 
-/* Párrafos */
 .about-text p {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -42,7 +38,6 @@
   color: white;
 }
 
-/* Slogan */
 .about-slogan {
   font-size: 1.2rem;
   margin-top: 30px;
@@ -54,7 +49,6 @@
   font-weight: 600;
 }
 
-/* === IMÁGENES === */
 .about-images {
   display: flex;
   justify-content: center;
@@ -75,7 +69,6 @@
   transform: translateY(0);
 }
 
-/* Hover con brillo violeta #4d64f4 */
 @media (min-width: 1024px) {
   .person-card:hover img {
     box-shadow: 0 0 25px rgba(77, 100, 244, 0.7);
@@ -145,7 +138,6 @@
   }
 }
 
-/* === Ajustes tipográficos responsivos === */
 @media (max-width: 640px) {
   .about-title {
     font-size: 1.8rem;

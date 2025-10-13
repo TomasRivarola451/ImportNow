@@ -13,12 +13,12 @@ export default function Header() {
 
   return (
     <header className="header">
-      {/* LOGO (clickeable para ir al inicio) */}
+
       <div className="logo" onClick={scrollToTop}>
         <img src={logoIcon} alt="ImportNow logo" className="clickable-logo" />
       </div>
 
-      {/* LINKS EN DESKTOP */}
+
       <nav className="nav-links">
         <a href="#hero">Inicio</a>
         <a href="#productos">Productos</a>

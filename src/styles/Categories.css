@@ -34,7 +34,7 @@
   display: block;
 }
 
-/* === DESKTOP === */
+
 @media (min-width: 769px) {
   .desktop-slider-wrap {
     position: relative;

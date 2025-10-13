@@ -41,14 +41,13 @@
   font-weight: 300;
 }
 
-/* Contenedor para swiper + flechas flotantes */
+
 .swiper-container-wrapper {
   position: relative;
   max-width: 1600px;
   margin: 0 auto;
 }
 
-/* Flechas flotantes a los costados - solo desktop */
 .swiper-button-prev-custom,
 .swiper-button-next-custom {
   display: none;
@@ -114,7 +113,6 @@
   animation: fadeUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-/* Brillo en la card activa solo en mobile */
 @media (max-width: 639px) {
   .swiper-slide-active .product-card {
     border-color: var(--accent-color, #4d64f4);
@@ -122,7 +120,6 @@
   }
 }
 
-/* En desktop, solo el hover aplica efectos */
 @media (min-width: 640px) {
   .swiper-slide-active .product-card {
     border-color: #222;
@@ -130,7 +127,6 @@
   }
 }
 
-/* Hover solo en desktop */
 @media (hover: hover) {
   .product-card:hover {
     transform: translateY(-6px) scale(1.03);
@@ -174,12 +170,10 @@
   border-top: 1px solid #222;
 }
 
-/* Título activo más suave */
 .swiper-slide-active .product-card h3 {
   text-shadow: 0 0 12px rgba(77, 100, 244, 0.15);
 }
 
-/* Animación de entrada */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -216,15 +210,12 @@
   .product-image { height: 320px; }
   .products-header h2 { font-size: 2.5rem; }
   .products-section { padding: 5rem 2rem; }
-  
-  /* Mostrar flechas flotantes solo en desktop */
   .swiper-button-prev-custom,
   .swiper-button-next-custom {
     display: flex;
   }
 }
 
-/* === Ajustes tipográficos responsivos === */
 @media (max-width: 640px) {
   .products-header h2 {
     font-size: 1.8rem;

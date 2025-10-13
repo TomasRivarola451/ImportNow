@@ -12,7 +12,6 @@
 .benefit-card {
   flex: 1 1 250px;
   max-width: 300px;
-  /* Fondo más oscuro */
   background: linear-gradient(180deg, rgba(15, 15, 15, 0.95), rgba(5, 5, 5, 0.9));
   border: 1px solid rgba(77, 100, 244, 0.25);
   border-radius: 16px;
@@ -27,7 +26,6 @@
   box-shadow: 0 0 20px rgba(77, 100, 244, 0.3);
 }
 
-/* Centrado del ícono */
 .benefit-icon {
   display: flex;
   justify-content: center;
@@ -59,7 +57,7 @@
     max-width: 100%;
   }
 }
-/* === EFECTO SCROLL === */
+
 .benefit-card {
   opacity: 0;
   transform: translateY(40px);

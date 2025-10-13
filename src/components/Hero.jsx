@@ -40,7 +40,7 @@ export default function Hero() {
       {/* Carrusel de marcas */}
       <div className="logo-marquee s-4" aria-hidden="true">
         <div className="logo-track">
-          {/* Logos repetidos */}
+         
           {[apple, sony, samsung, dji, jbl, garmin, motorola, rayban, xiaomi, hp].map((src, i) => (
             <img key={i} src={src} alt="marca" />
           ))}

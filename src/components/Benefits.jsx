@@ -35,7 +35,7 @@ export default function Benefits() {
       text: "Solo trabajamos con marcas y proveedores oficiales.",
     },
 {
-      icon: <FaShieldAlt />, // ícono de un escudo, transmite protección/garantía
+      icon: <FaShieldAlt />,
       title: "Garantía asegurada",
       text: "Todos nuestros productos cuentan con garantía y respaldo profesional.",
     },
