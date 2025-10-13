@@ -35,7 +35,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 100px; /* antes 120px, más arriba */
+  margin-bottom: 100px;
+  margin-top: 40px;
 }
 
 .s-1 { --d: 0.10s; }
@@ -45,12 +46,12 @@ body {
 
 /* Logo */
 .hero-logo {
-  width: 260px; /* levemente más chico */
+  width: 260px;
   height: auto;
   display: block;
-  margin: 0 auto 0.6rem; /* antes 1rem → menos espacio debajo */
+  margin: 0 auto 0.5rem;
   filter: drop-shadow(0 0 20px rgba(77,100,244,0.6));
-  transform: scale(.9);
+  transform: translateY(10px);
   opacity: 0;
   animation: zoomIn 0.7s cubic-bezier(.2,.9,.2,1) forwards;
   animation-delay: var(--d, 0s);
@@ -65,7 +66,7 @@ body {
 .hero-title {
   font-size: 1.5rem;
   font-weight: 300;
-  margin: 0 0 1rem; /* antes 1.5rem */
+  margin: 0 0 1.2rem;
   line-height: 1.25;
   letter-spacing: -0.5px;
   opacity: 0;
@@ -81,7 +82,7 @@ body {
 
 /* Botón */
 .hero-btn {
-  margin-top: 1rem;
+  margin-top: 2rem;
   background: linear-gradient(135deg, #5b73ff, #4d64f4);
   color: #fff;
   border: none;
@@ -104,7 +105,6 @@ body {
   z-index: 3;
 }
 
-/* Efecto de brillo en el botón */
 .hero-btn::before {
   content: '';
   position: absolute;
@@ -131,7 +131,7 @@ body {
   transform: translateY(-1px) scale(1.02);
 }
 
-/* Carrusel con fade effect */
+/* Carrusel */
 .logo-marquee {
   position: absolute;
   left: 0;
@@ -142,27 +142,15 @@ body {
   width: 100%;
   overflow: hidden;
   padding: 15px 0;
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 10%,
-    black 90%,
-    transparent 100%
-  );
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
 .logo-track {
   display: flex;
   align-items: center;
   gap: 3rem;
-  animation: marqueeInfinite 40s linear infinite;
+  animation: marqueeInfinite 18s linear infinite;
 }
 
 .logo-track img {
@@ -189,30 +177,70 @@ body {
   to { transform: translateX(-50%); }
 }
 
-/* === Desktop === */
-@media (min-width: 1024px) {
+/* === Tablet/Notebook (1024px - 1440px) === */
+@media (min-width: 1024px) and (max-width: 1440px) {
   .hero-content {
-    margin-bottom: 70px; /* antes 80px */
+    margin-bottom: 180px;
+    margin-top: 0;
+    transform: scale(0.85);
+  }
+
+  .hero-logo {
+    width: 280px;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-btn {
+    font-size: 1.05rem;
+    padding: 0.95rem 2.4rem;
+    margin-top: 1.8rem;
+  }
+
+  .logo-marquee {
+    bottom: 40px;
+  }
+
+  .logo-track {
+    animation: marqueeInfinite 40s linear infinite;
+  }
+}
+
+/* === Desktop Grande (1441px+) === */
+@media (min-width: 1441px) {
+  .hero-content {
+    margin-bottom: 140px;
+    margin-top: 0;
   }
 
   .hero-logo {
     width: 300px;
-    margin-bottom: 0.8rem; /* antes 1.2rem → más cerca del texto */
+    margin-bottom: 0.6rem;
   }
 
   .hero-title {
     font-size: 2.3rem;
-    margin-bottom: 1.2rem; /* menos separación */
+    margin-bottom: 1.4rem;
     line-height: 1.2;
   }
 
   .hero-btn {
     font-size: 1.1rem;
     padding: 1rem 2.6rem;
+    margin-top: 2.2rem;
   }
 
   .logo-marquee {
     bottom: 25px;
+  }
+
+  .logo-track {
+    animation: marqueeInfinite 40s linear infinite;
   }
 }
 
@@ -220,15 +248,15 @@ body {
 @media (max-width: 640px) {
   .hero-logo {
     width: 220px;
-    margin-bottom: 0.4rem; /* antes 0.8rem → más cerca aún */
+    margin-bottom: 0.5rem;
   }
 
   .hero-title {
     font-size: 1.35rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
 
   .hero-btn {
-    margin-top: 0.8rem;
+    margin-top: 2rem;
   }
 }
