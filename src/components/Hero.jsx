@@ -28,10 +28,9 @@ export default function Hero() {
 
         {/* Botón */}
           <a
-            href="https://docs.google.com/spreadsheets/d/2PACX-1vR4OsHMq6exsvF5XFmQ2PBiU6U3pNv44Dc_F2d3MWPCXqlmLBgCecim88XZ1jSYpA/edit?usp=sharing"
+            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4OsHMq6exsvF5XFmQ2PBiU6U3pNv44Dc_F2d3MWPCXqlmLBgCecim88XZ1jSYpA/pubhtml"
             target="_blank"
             rel="noopener noreferrer"
-            className="hero-btn s-3"
           >
           Ver Catálogo Completo 
         </a>
