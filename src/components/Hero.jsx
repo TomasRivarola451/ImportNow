@@ -28,7 +28,7 @@ export default function Hero() {
 
         {/* Botón */}
           <a
-            href="https://docs.google.com/spreadsheets/d/e/2PACX-1vR4OsHMq6exsvF5XFmQ2PBiU6U3pNv44Dc_F2d3MWPCXqlmLBgCecim88XZ1jSYpA/pubhtml"
+            href="https://docs.google.com/spreadsheets/d/1pLVV-3wfBLwb0mLDK34TU6F-5q4Kruyw/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="hero-btn s-3"
