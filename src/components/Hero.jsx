@@ -28,7 +28,7 @@ export default function Hero() {
 
         {/* Botón */}
         <a
-          href="https://02cf0076-07a2-4021-a4e3-9c08d9200afc.filesusr.com/ugd/983be4_8db884adabd44b608e6ab8ab33bed973.xlsx?dn=CATALOGO%20MINORISTAA%20IMPORT%201.xlsx&fbclid=PAQ0xDSwNRTcFleHRuA2FlbQIxMQABp2iE4lNtPGmsv09pj5m3-sLneVCI02JF4nblyxzeiTzKRyw_UCShqP4n9QnJ_aem_mdmOccLd7cG7liRDSrKWtw"
+          href="https://docs.google.com/spreadsheets/d/1WJAe9oESdCzMt6XJ6cNGA2qOqQS-zDlf/export?format=xlsx"
           target="_blank"
           rel="noopener noreferrer"
           className="hero-btn s-3"
