@@ -11,7 +11,7 @@ export default function Products() {
     { name: "PlayStation 5 Pro", img: "/images/playcarru.webp", accent: "#7C3AED" },
     { name: "MacBook Pro", img: "/images/macbookcarru.webp", accent: "#7C3AED" },
     { name: "AirPods Pro 3", img: "/images/airpodcarru.webp", accent: "#7C3AED" },
-    { name: "Samsung S25 Ultra", img: "/images/samsungcarru.webp", accent: "#7C3AED" },
+    { name: "Samsung S26 Ultra", img: "/images/modelo26.webp", accent: "#7C3AED" },
     { name: "JBL Charge 5", img: "/images/jblcarru.webp", accent: "#7C3AED" },
     { name: "Motorola Razr 60 Ultra", img: "/images/motocarru.webp", accent: "#7C3AED" },
     { name: "DJI Osmo Pocket 3", img: "/images/camcarru.webp", accent: "#7C3AED" },
