@@ -49,7 +49,7 @@ export default function Categories() {
 
   const images = [
     { src: "/images/macbookbanner.webp", alt: "MacBook Pro" },
-    { src: "/images/samsungultra.webp", alt: "Samsung Galaxy S24 Ultra" },
+    { src: "/images/samsungs26.webp", alt: "Samsung Galaxy S26 Ultra" },
     { src: "/images/iphonebaner.webp", alt: "iPhone 17 Pro", eager: true },
   ];
 
